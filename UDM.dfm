@@ -2,14 +2,21 @@ object conexaoDM: TconexaoDM
   Height = 480
   Width = 640
   object qryAluno: TFDQuery
+    Connection = connectionDB
+    SQL.Strings = (
+      'SELECT *'
+      'FROM aluno'
+      'ORDER BY nome')
     Left = 72
     Top = 152
   end
   object qrySala: TFDQuery
+    Connection = connectionDB
     Left = 72
     Top = 256
   end
   object dsAluno: TDataSource
+    DataSet = qryAluno
     Left = 256
     Top = 72
   end
@@ -29,7 +36,8 @@ object conexaoDM: TconexaoDM
       'User_Name=root'
       'Password=@B7l5a5n3k5@'
       'CharacterSet==utf8mb4'
-      'DriverID=MySQL')
+      'DriverID=MySQL'
+      'UseSSL=False')
     Connected = True
     LoginPrompt = False
     Left = 80

@@ -13,9 +13,10 @@ type
     btnAdicionar: TButton;
     btnEditar: TButton;
     btnExcluir: TButton;
-    dsListar: TDataSource;
     procedure FormShow(Sender: TObject);
     procedure btnAdicionarClick(Sender: TObject);
+    procedure btnEditarClick(Sender: TObject);
+    procedure btnExcluirClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -31,6 +32,8 @@ uses UDM, uCadAluno;
 
 {$R *.dfm}
 
+
+
 procedure TfrmListarAluno.FormShow(Sender: TObject);
 begin
   conexaoDM.AbrirAlunos;
@@ -45,6 +48,26 @@ begin
   finally
     frmCadAluno.Free;
   end;
+end;
+
+procedure TfrmListarAluno.btnEditarClick(Sender: TObject);
+begin
+  if not conexaoDM.qryAluno.IsEmpty then
+  begin
+    conexaoDM.qryAluno.Edit;
+    frmCadAluno := TfrmCadAluno.Create(nil);
+    try
+      frmCadAluno.ShowModal;
+    finally
+      frmCadAluno.Free;
+    end;
+  end;
+end;
+
+procedure TfrmListarAluno.btnExcluirClick(Sender: TObject);
+begin
+  if MessageDlg('Deseja Excluir o aluno? ', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
+
 end;
 
 end.

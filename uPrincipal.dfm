@@ -17,6 +17,7 @@ object frmListarAluno: TfrmListarAluno
     Top = 184
     Width = 624
     Height = 257
+    DataSource = conexaoDM.dsAluno
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -40,6 +41,7 @@ object frmListarAluno: TfrmListarAluno
     Height = 25
     Caption = 'Editar'
     TabOrder = 2
+    OnClick = btnEditarClick
   end
   object btnExcluir: TButton
     Left = 536
@@ -48,9 +50,6 @@ object frmListarAluno: TfrmListarAluno
     Height = 25
     Caption = 'Excluir'
     TabOrder = 3
-  end
-  object dsListar: TDataSource
-    Left = 312
-    Top = 40
+    OnClick = btnExcluirClick
   end
 end
