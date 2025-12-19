@@ -32,7 +32,7 @@ object conexaoDM: TconexaoDM
   end
   object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
     DriverID = 'MySQL'
-    VendorLib = 'C:\Program Files\MySQL\MySQL Server 8.0\lib\libmysql.dll'
+    VendorLib = 'F:\Teste_GSA\Teste_GSA\libmysql.dll'
     Left = 360
     Top = 136
   end
