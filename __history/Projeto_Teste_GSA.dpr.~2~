@@ -1,0 +1,14 @@
+program Projeto_Teste_GSA;
+
+uses
+  Vcl.Forms,
+  uPrincipal in 'uPrincipal.pas' {frmListarAluno};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmListarAluno, frmListarAluno);
+  Application.Run;
+end.

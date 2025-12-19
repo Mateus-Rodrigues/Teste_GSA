@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2025/06/02 21:36:59.000.770,=C:\Users\mateu\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2025/12/01 22:22:04.000.459,=C:\Users\mateu\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2025/12/01 22:23:21.000.301,=C:\Users\mateu\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2025/12/18 21:15:42.446,=C:\Users\mateu\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2025/12/18 21:18:01.276,F:\Teste_GSA\Teste_GSA\uPrincipal.pas=C:\Users\mateu\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2025/12/18 21:18:01.276,F:\Teste_GSA\Teste_GSA\uPrincipal.dfm=C:\Users\mateu\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2025/12/18 21:18:23.535,F:\Teste_GSA\Teste_GSA\Projeto_Teste_GSA.dproj=C:\Users\mateu\OneDrive\Documentos\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+    <Transaction>2025/12/18 21:19:13.565,=F:\Teste_GSA\Teste_GSA\Unit1.pas</Transaction>
+    <Transaction>2025/12/18 21:20:09.296,F:\Teste_GSA\Teste_GSA\uCadAluno.dfm=F:\Teste_GSA\Teste_GSA\Unit1.dfm</Transaction>
+    <Transaction>2025/12/18 21:20:09.296,F:\Teste_GSA\Teste_GSA\uCadAluno.pas=F:\Teste_GSA\Teste_GSA\Unit1.pas</Transaction>
+    <Transaction>2025/12/18 21:20:58.214,=F:\Teste_GSA\Teste_GSA\Unit1.pas</Transaction>
+    <Transaction>2025/12/18 21:21:50.971,F:\Teste_GSA\Teste_GSA\UDM.dfm=F:\Teste_GSA\Teste_GSA\Unit1.dfm</Transaction>
+    <Transaction>2025/12/18 21:21:50.971,F:\Teste_GSA\Teste_GSA\UDM.pas=F:\Teste_GSA\Teste_GSA\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>
