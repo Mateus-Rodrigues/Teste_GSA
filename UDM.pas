@@ -8,7 +8,7 @@ uses
   FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.VCLUI.Wait,
   FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, Data.DB,
   FireDAC.Comp.DataSet, FireDAC.Comp.Client, FireDAC.Phys.MySQL,
-  FireDAC.Phys.MySQLDef;
+  FireDAC.Phys.MySQLDef, Data.Win.ADODB;
 
 type
   TconexaoDM = class(TDataModule)
@@ -18,6 +18,11 @@ type
     dsSala: TDataSource;
     FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink;
     connectionDB: TFDConnection;
+    ADOConnection1: TADOConnection;
+    ADOTable1: TADOTable;
+    ADOTable2: TADOTable;
+    ADOQuery1: TADOQuery;
+    ADOQuery2: TADOQuery;
   private
     { Private declarations }
   public

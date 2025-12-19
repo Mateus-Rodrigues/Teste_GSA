@@ -18,11 +18,6 @@ type
     dsSala: TDataSource;
     FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink;
     connectionDB: TFDConnection;
-    ADOConnection1: TADOConnection;
-    ADOTable1: TADOTable;
-    ADOTable2: TADOTable;
-    ADOQuery1: TADOQuery;
-    ADOQuery2: TADOQuery;
   private
     { Private declarations }
   public
@@ -40,7 +35,7 @@ implementation
 
 {$R *.dfm}
 
-// criando procedures (FunÃ§Ãµes) para carregamentos de dados
+// criando procedures (Funções) para carregamentos de dados
 procedure TconexaoDM.AbrirSalas;
 begin
   qrySala.Close;

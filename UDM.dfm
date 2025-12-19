@@ -50,4 +50,27 @@ object conexaoDM: TconexaoDM
     Left = 72
     Top = 64
   end
+  object ADOConnection1: TADOConnection
+    Provider = 'Windows Search Data Source'
+    Left = 376
+    Top = 288
+  end
+  object ADOTable1: TADOTable
+    Left = 472
+    Top = 296
+  end
+  object ADOTable2: TADOTable
+    Left = 552
+    Top = 296
+  end
+  object ADOQuery1: TADOQuery
+    Parameters = <>
+    Left = 472
+    Top = 368
+  end
+  object ADOQuery2: TADOQuery
+    Parameters = <>
+    Left = 552
+    Top = 376
+  end
 end
