@@ -16,6 +16,7 @@ object conexaoDM: TconexaoDM
     Top = 152
   end
   object qrySala: TFDQuery
+    MasterSource = dsAluno
     Connection = connectionDB
     Left = 72
     Top = 256
@@ -31,7 +32,6 @@ object conexaoDM: TconexaoDM
     Top = 256
   end
   object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
-    DriverID = 'MySQL'
     VendorLib = 'F:\Teste_GSA\Teste_GSA\libmysql.dll'
     Left = 360
     Top = 136
@@ -40,11 +40,12 @@ object conexaoDM: TconexaoDM
     Params.Strings = (
       'Server=127.0.0.1'
       'Database=escola'
-      'User_Name=localhost'
-      'Password=@B7l5a5n3k5@'
+      'User_Name=root'
+      'Password=@Blank123@'
       'CharacterSet==utf8mb4'
-      'UseSSL=True'
-      'DriverID=MySQL')
+      'DriverID=MySQL'
+      'UseSSL=False'
+      'VendorLib=libmysql.dll')
     LoginPrompt = False
     Left = 72
     Top = 64
