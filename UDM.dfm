@@ -1,17 +1,11 @@
 object conexaoDM: TconexaoDM
   Height = 480
   Width = 640
-  object connectionDB: TFDConnection
-    Left = 80
-    Top = 48
-  end
   object qryAluno: TFDQuery
-    Connection = connectionDB
     Left = 72
     Top = 152
   end
   object qrySala: TFDQuery
-    Connection = connectionDB
     Left = 72
     Top = 256
   end
@@ -22,5 +16,23 @@ object conexaoDM: TconexaoDM
   object dsSala: TDataSource
     Left = 248
     Top = 184
+  end
+  object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
+    VendorLib = 'F:\Teste_GSA\Teste_GSA\libmysql.dll'
+    Left = 360
+    Top = 136
+  end
+  object connectionDB: TFDConnection
+    Params.Strings = (
+      'Server=localhost'
+      'Database=escola'
+      'User_Name=root'
+      'Password=@B7l5a5n3k5@'
+      'CharacterSet==utf8mb4'
+      'DriverID=MySQL')
+    Connected = True
+    LoginPrompt = False
+    Left = 80
+    Top = 48
   end
 end

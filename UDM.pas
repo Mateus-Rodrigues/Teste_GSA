@@ -7,15 +7,17 @@ uses
   FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
   FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.VCLUI.Wait,
   FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, Data.DB,
-  FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, FireDAC.Phys.MySQL,
+  FireDAC.Phys.MySQLDef;
 
 type
   TconexaoDM = class(TDataModule)
-    connectionDB: TFDConnection;
     qryAluno: TFDQuery;
     qrySala: TFDQuery;
     dsAluno: TDataSource;
     dsSala: TDataSource;
+    FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink;
+    connectionDB: TFDConnection;
   private
     { Private declarations }
   public
