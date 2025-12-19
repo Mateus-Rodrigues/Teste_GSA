@@ -41,8 +41,9 @@ end;
 
 procedure TfrmListarAluno.btnAdicionarClick(Sender: TObject);
 begin
+  if not conexaoDM.qryAluno.Active then
   conexaoDM.qryAluno.Append;
-  frmCadAluno := TfrmCadAluno.Create(nil);
+  frmCadAluno := TfrmCadAluno.Create(Self);
   try
     frmCadAluno.ShowModal;
   finally

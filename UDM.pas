@@ -35,6 +35,7 @@ implementation
 
 {$R *.dfm}
 
+// criando procedures (Funções) para carregamentos de dados
 procedure TconexaoDM.AbrirSalas;
 begin
   qrySala.Close;
