@@ -9,14 +9,15 @@ uses
 
 type
   TfrmListarAluno = class(TForm)
-    grdListarAluno: TDBGrid;
-    btnAdicionar: TButton;
+    DBGrid1: TDBGrid;
     btnEditar: TButton;
+    btnAdicionar: TButton;
     btnExcluir: TButton;
     procedure FormShow(Sender: TObject);
     procedure btnAdicionarClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
     procedure btnExcluirClick(Sender: TObject);
+   
   private
     { Private declarations }
   public
@@ -28,47 +29,44 @@ var
 
 implementation
 
-uses UDM, uCadAluno;
+uses dmConexao, uCadAluno;
 
 {$R *.dfm}
 
 
 
-procedure TfrmListarAluno.FormShow(Sender: TObject);
-begin
-  conexaoDM.AbrirAlunos;
-end;
-
 procedure TfrmListarAluno.btnAdicionarClick(Sender: TObject);
 begin
-  if not conexaoDM.qryAluno.Active then
-  conexaoDM.qryAluno.Append;
-  frmCadAluno := TfrmCadAluno.Create(Self);
-  try
-    frmCadAluno.ShowModal;
-  finally
-    frmCadAluno.Free;
-  end;
+   uDM.qryAluno.Append;
+   Application.CreateForm(TfrmCadAluno, frmCadAluno);
+   frmCadAluno.ShowModal;
 end;
 
 procedure TfrmListarAluno.btnEditarClick(Sender: TObject);
 begin
-  if not conexaoDM.qryAluno.IsEmpty then
+  if not uDM.qryAluno.IsEmpty then
   begin
-    conexaoDM.qryAluno.Edit;
-    frmCadAluno := TfrmCadAluno.Create(nil);
-    try
-      frmCadAluno.ShowModal;
-    finally
-      frmCadAluno.Free;
-    end;
+    uDM.qryAluno.Edit;
+    Application.CreateForm(TfrmCadAluno, frmCadAluno);
+    frmCadAluno.ShowModal;
   end;
 end;
 
 procedure TfrmListarAluno.btnExcluirClick(Sender: TObject);
 begin
-  if MessageDlg('Deseja Excluir o aluno? ', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
+ if Application.MessageBox(
+ 'Deseja Excluir?',
+ 'Confirmação',
+ MB_YESNO + MB_ICONQUESTION
+ ) = IDYES then
+ begin
+   uDM.qryAluno.Delete;
+ end;
+end;
 
+procedure TfrmListarAluno.FormShow(Sender: TObject);
+begin
+ uDM.qryAluno.Open;
 end;
 
 end.

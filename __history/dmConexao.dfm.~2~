@@ -1,0 +1,23 @@
+object uDM: TuDM
+  Height = 480
+  Width = 640
+  object adoConexao: TADOConnection
+    ConnectionString = 
+      'Provider=MSDASQL.1;Persist Security Info=False;Extended Properti' +
+      'es="DATABASE=escola;DB=escola;DSN=Mysql ODBC Conector DataSource' +
+      '1;NO_SCHEMA=1;PASSWORD={@Blank123@};PORT=3306;SERVER=127.0.0.1;U' +
+      'ID=root;USER=root"'
+    Provider = 'MSDASQL.1'
+    Left = 88
+    Top = 56
+  end
+  object ADOQuery1: TADOQuery
+    Parameters = <>
+    Left = 88
+    Top = 136
+  end
+  object DataSource1: TDataSource
+    Left = 88
+    Top = 216
+  end
+end

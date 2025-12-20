@@ -4,7 +4,7 @@ uses
   Vcl.Forms,
   uPrincipal in 'uPrincipal.pas' {frmListarAluno},
   uCadAluno in 'uCadAluno.pas' {frmCadAluno},
-  UDM in 'UDM.pas' {conexaoDM: TDataModule};
+  dmConexao in 'dmConexao.pas' {uDM: TDataModule};
 
 {$R *.res}
 
@@ -13,6 +13,6 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TfrmListarAluno, frmListarAluno);
   Application.CreateForm(TfrmCadAluno, frmCadAluno);
-  Application.CreateForm(TconexaoDM, conexaoDM);
+  Application.CreateForm(TuDM, uDM);
   Application.Run;
 end.

@@ -12,12 +12,11 @@ object frmListarAluno: TfrmListarAluno
   Font.Style = []
   OnShow = FormShow
   TextHeight = 15
-  object grdListarAluno: TDBGrid
-    Left = -8
-    Top = 184
-    Width = 624
-    Height = 257
-    DataSource = conexaoDM.dsAluno
+  object DBGrid1: TDBGrid
+    Left = 0
+    Top = 168
+    Width = 616
+    Height = 273
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -25,27 +24,27 @@ object frmListarAluno: TfrmListarAluno
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
   end
-  object btnAdicionar: TButton
-    Left = 536
-    Top = 40
-    Width = 75
-    Height = 25
-    Caption = 'Adicionar'
-    TabOrder = 1
-    OnClick = btnAdicionarClick
-  end
   object btnEditar: TButton
-    Left = 536
-    Top = 80
+    Left = 520
+    Top = 79
     Width = 75
     Height = 25
     Caption = 'Editar'
-    TabOrder = 2
+    TabOrder = 1
     OnClick = btnEditarClick
   end
+  object btnAdicionar: TButton
+    Left = 520
+    Top = 48
+    Width = 75
+    Height = 25
+    Caption = 'Adicionar'
+    TabOrder = 2
+    OnClick = btnAdicionarClick
+  end
   object btnExcluir: TButton
-    Left = 536
-    Top = 120
+    Left = 520
+    Top = 110
     Width = 75
     Height = 25
     Caption = 'Excluir'

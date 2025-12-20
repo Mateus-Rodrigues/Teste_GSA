@@ -131,8 +131,8 @@
             <Form>frmCadAluno</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="UDM.pas">
-            <Form>conexaoDM</Form>
+        <DCCReference Include="dmConexao.pas">
+            <Form>uDM</Form>
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>

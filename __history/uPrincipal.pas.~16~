@@ -1,0 +1,40 @@
+unit uPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.StdCtrls, Vcl.Grids,
+  Vcl.DBGrids;
+
+type
+  TfrmListarAluno = class(TForm)
+    DBGrid1: TDBGrid;
+    btnEditar: TButton;
+    btnAdicionar: TButton;
+    btnExcluir: TButton;
+    procedure FormShow(Sender: TObject);
+   
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmListarAluno: TfrmListarAluno;
+
+implementation
+
+uses dmConexao, uCadAluno;
+
+{$R *.dfm}
+
+
+
+procedure TfrmListarAluno.FormShow(Sender: TObject);
+begin
+ uDM.qryAluno.Open;
+end;
+
+end.

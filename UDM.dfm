@@ -1,76 +1,35 @@
 object conexaoDM: TconexaoDM
   Height = 480
   Width = 640
-  object qryAluno: TFDQuery
-    Connection = connectionDB
-    SQL.Strings = (
-      'SELECT '
-      '   id_aluno,'
-      '   nome,'
-      '   data_nascimento,'
-      '   endereco,'
-      '   sala_id'
-      'FROM aluno'
-      'ORDER BY nome')
-    Left = 72
-    Top = 152
-  end
-  object qrySala: TFDQuery
-    MasterSource = dsAluno
-    Connection = connectionDB
-    Left = 72
-    Top = 256
-  end
-  object dsAluno: TDataSource
-    DataSet = qryAluno
-    Left = 176
-    Top = 152
-  end
-  object dsSala: TDataSource
-    DataSet = qrySala
-    Left = 176
-    Top = 256
-  end
-  object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
-    VendorLib = 'F:\Teste_GSA\Teste_GSA\libmysql.dll'
-    Left = 360
-    Top = 136
-  end
-  object connectionDB: TFDConnection
-    Params.Strings = (
-      'Server=127.0.0.1'
-      'Database=escola'
-      'User_Name=root'
-      'Password=@Blank123@'
-      'CharacterSet==utf8mb4'
-      'DriverID=MySQL'
-      'UseSSL=False'
-      'VendorLib=libmysql.dll')
+  object conexaoDB: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=MSDASQL.1;Persist Security Info=False;User ID=root;Exte' +
+      'nded Properties="DATABASE=escola;DB=escola;DSN=Mysql ODBC Conect' +
+      'or DataSource1;NO_SCHEMA=1;PASSWORD={@Blank123@};PORT=3306;SERVE' +
+      'R=127.0.0.1;UID=root;USER=root";Initial Catalog=escola'
     LoginPrompt = False
-    Left = 72
-    Top = 64
+    Left = 112
+    Top = 128
   end
-  object ADOConnection1: TADOConnection
-    Provider = 'Windows Search Data Source'
-    Left = 376
-    Top = 288
-  end
-  object ADOTable1: TADOTable
-    Left = 472
-    Top = 296
-  end
-  object ADOTable2: TADOTable
-    Left = 552
-    Top = 296
-  end
-  object ADOQuery1: TADOQuery
+  object qryAluno: TADOQuery
+    Active = True
+    Connection = conexaoDB
+    CursorType = ctStatic
     Parameters = <>
-    Left = 472
-    Top = 368
+    SQL.Strings = (
+      'SELECT * FROM aluno')
+    Left = 72
+    Top = 200
   end
   object ADOQuery2: TADOQuery
     Parameters = <>
-    Left = 552
-    Top = 376
+    Left = 288
+    Top = 216
+  end
+  object dsAluno: TDataSource
+    DataSet = qryAluno
+    Left = 72
+    Top = 272
   end
 end
