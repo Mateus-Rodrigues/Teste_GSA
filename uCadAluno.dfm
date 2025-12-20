@@ -2,8 +2,8 @@ object frmCadAluno: TfrmCadAluno
   Left = 0
   Top = 0
   Caption = 'Cadastrar Aluno'
-  ClientHeight = 441
-  ClientWidth = 624
+  ClientHeight = 368
+  ClientWidth = 349
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,27 +11,82 @@ object frmCadAluno: TfrmCadAluno
   Font.Name = 'Segoe UI'
   Font.Style = []
   TextHeight = 15
-  object DBEdit1: TDBEdit
+  object lblNome: TLabel
     Left = 16
-    Top = 144
+    Top = 91
+    Width = 88
+    Height = 15
+    Caption = 'Nome do ALuno'
+  end
+  object lblEndereco: TLabel
+    Left = 16
+    Top = 155
+    Width = 104
+    Height = 15
+    Caption = 'Endere'#231'o do ALuno'
+  end
+  object lblDataNascimento: TLabel
+    Left = 16
+    Top = 227
+    Width = 107
+    Height = 15
+    Caption = 'Data de Nascimento'
+  end
+  object DBEditNome: TDBEdit
+    Left = 16
+    Top = 112
     Width = 313
     Height = 23
+    DataField = 'nome'
+    DataSource = uDM.dsAluno
     TabOrder = 0
   end
   object btnSalvar: TButton
-    Left = 128
-    Top = 215
+    Left = 166
+    Top = 311
     Width = 75
     Height = 25
     Caption = 'Salvar'
     TabOrder = 1
+    OnClick = btnSalvarClick
   end
   object btnCancelar: TButton
-    Left = 200
-    Top = 287
+    Left = 254
+    Top = 311
     Width = 75
     Height = 25
-    Caption = 'Salvar'
+    Caption = 'Cancelar'
     TabOrder = 2
+    OnClick = btnCancelarClick
+  end
+  object DBEditEndereco: TDBEdit
+    Left = 16
+    Top = 176
+    Width = 313
+    Height = 23
+    DataField = 'endereco'
+    DataSource = uDM.dsAluno
+    TabOrder = 3
+  end
+  object DBEditDataNascimento: TDBEdit
+    Left = 16
+    Top = 248
+    Width = 121
+    Height = 23
+    DataField = 'data_nascimento'
+    DataSource = uDM.dsAluno
+    TabOrder = 4
+  end
+  object DBLookupComboBox1: TDBLookupComboBox
+    Left = 224
+    Top = 248
+    Width = 105
+    Height = 23
+    DataField = 'sala_id'
+    DataSource = uDM.dsAluno
+    KeyField = 'id'
+    ListField = 'nome'
+    ListSource = uDM.dsSala
+    TabOrder = 5
   end
 end

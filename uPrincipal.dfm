@@ -2,7 +2,7 @@ object frmListarAluno: TfrmListarAluno
   Left = 0
   Top = 0
   Caption = 'Listar Aluno'
-  ClientHeight = 441
+  ClientHeight = 514
   ClientWidth = 624
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -12,11 +12,12 @@ object frmListarAluno: TfrmListarAluno
   Font.Style = []
   OnShow = FormShow
   TextHeight = 15
-  object DBGrid1: TDBGrid
+  object grdListar: TDBGrid
     Left = 0
-    Top = 168
+    Top = 233
     Width = 616
     Height = 273
+    DataSource = uDM.dsAluno
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -50,5 +51,22 @@ object frmListarAluno: TfrmListarAluno
     Caption = 'Excluir'
     TabOrder = 3
     OnClick = btnExcluirClick
+  end
+  object edtPesquisar: TEdit
+    Left = 0
+    Top = 191
+    Width = 433
+    Height = 23
+    TabOrder = 4
+    TextHint = 'Pesquisar'
+  end
+  object btnPesquisar: TButton
+    Left = 520
+    Top = 190
+    Width = 75
+    Height = 25
+    Caption = 'Buscar'
+    TabOrder = 5
+    OnClick = btnPesquisarClick
   end
 end

@@ -10,6 +10,10 @@ type
     adoConexao: TADOConnection;
     qryAluno: TADOQuery;
     dsAluno: TDataSource;
+    qrySala: TADOQuery;
+    qrySalaid: TAutoIncField;
+    qrySalanome: TStringField;
+    dsSala: TDataSource;
   private
     { Private declarations }
   public

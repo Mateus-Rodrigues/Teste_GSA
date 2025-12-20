@@ -5,13 +5,21 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Mask, Vcl.ExtCtrls,
-  Vcl.DBCtrls;
+  Vcl.DBCtrls, Data.DB, Vcl.ComCtrls;
 
 type
   TfrmCadAluno = class(TForm)
-    DBEdit1: TDBEdit;
+    DBEditNome: TDBEdit;
     btnSalvar: TButton;
     btnCancelar: TButton;
+    DBEditEndereco: TDBEdit;
+    DBEditDataNascimento: TDBEdit;
+    lblNome: TLabel;
+    lblEndereco: TLabel;
+    lblDataNascimento: TLabel;
+    DBLookupComboBox1: TDBLookupComboBox;
+    procedure btnSalvarClick(Sender: TObject);
+    procedure btnCancelarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -24,5 +32,24 @@ var
 implementation
 
 {$R *.dfm}
+
+uses dmConexao, uPrincipal;
+
+procedure TfrmCadAluno.btnCancelarClick(Sender: TObject);
+begin
+  uDM.qryAluno.Cancel;
+  Close;
+end;
+
+procedure TfrmCadAluno.btnSalvarClick(Sender: TObject);
+begin
+  if uDM.qryAluno.State in [dsInsert, dsEdit] then
+  begin
+    uDM.qryAluno.FieldByName('data_inclusao').AsDateTime := Now;
+    uDM.qryAluno.Post;
+    Close;
+  end;
+
+end;
 
 end.

@@ -9,14 +9,17 @@ uses
 
 type
   TfrmListarAluno = class(TForm)
-    DBGrid1: TDBGrid;
+    grdListar: TDBGrid;
     btnEditar: TButton;
     btnAdicionar: TButton;
     btnExcluir: TButton;
+    edtPesquisar: TEdit;
+    btnPesquisar: TButton;
     procedure FormShow(Sender: TObject);
     procedure btnAdicionarClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
     procedure btnExcluirClick(Sender: TObject);
+    procedure btnPesquisarClick(Sender: TObject);
    
   private
     { Private declarations }
@@ -37,10 +40,12 @@ uses dmConexao, uCadAluno;
 
 procedure TfrmListarAluno.btnAdicionarClick(Sender: TObject);
 begin
+   uDM.qrySala.Append;
    uDM.qryAluno.Append;
    Application.CreateForm(TfrmCadAluno, frmCadAluno);
    frmCadAluno.ShowModal;
 end;
+
 
 procedure TfrmListarAluno.btnEditarClick(Sender: TObject);
 begin
@@ -64,8 +69,18 @@ begin
  end;
 end;
 
+procedure TfrmListarAluno.btnPesquisarClick(Sender: TObject);
+begin
+   uDM.qryAluno.Close;
+   uDM.qryAluno.Parameters.ParamByName('pNome').Value :=
+   '%' + edtPesquisar.Text + '%';
+   uDM.qryAluno.Open;
+end;
+
 procedure TfrmListarAluno.FormShow(Sender: TObject);
 begin
+ uDM.qryAluno.Close;
+ uDM.qryAluno.Parameters.ParamByName('pNome').Value := '%';
  uDM.qryAluno.Open;
 end;
 

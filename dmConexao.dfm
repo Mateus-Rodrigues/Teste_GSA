@@ -13,18 +13,52 @@ object uDM: TuDM
     Top = 56
   end
   object qryAluno: TADOQuery
-    Active = True
     Connection = adoConexao
     CursorType = ctStatic
-    Parameters = <>
+    Parameters = <
+      item
+        Name = 'pNome'
+        Attributes = [paNullable]
+        DataType = ftString
+        NumericScale = 124
+        Precision = 255
+        Size = 255
+        Value = Null
+      end>
     SQL.Strings = (
-      'SELECT * FROM aluno')
+      'SELECT * '
+      'FROM aluno'
+      'WHERE nome LIKE :pNome'
+      'ORDER BY nome')
     Left = 88
     Top = 136
   end
   object dsAluno: TDataSource
     DataSet = qryAluno
     Left = 88
+    Top = 216
+  end
+  object qrySala: TADOQuery
+    Active = True
+    Connection = adoConexao
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT * FROM sala')
+    Left = 288
+    Top = 104
+    object qrySalaid: TAutoIncField
+      FieldName = 'id'
+      ReadOnly = True
+    end
+    object qrySalanome: TStringField
+      FieldName = 'nome'
+      Size = 100
+    end
+  end
+  object dsSala: TDataSource
+    DataSet = qrySala
+    Left = 296
     Top = 216
   end
 end
