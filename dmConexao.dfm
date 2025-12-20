@@ -26,7 +26,7 @@ object uDM: TuDM
         Value = Null
       end>
     SQL.Strings = (
-      'SELECT * '
+      'SELECT *'
       'FROM aluno'
       'WHERE nome LIKE :pNome'
       'ORDER BY nome')

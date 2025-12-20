@@ -82,6 +82,13 @@ begin
  uDM.qryAluno.Close;
  uDM.qryAluno.Parameters.ParamByName('pNome').Value := '%';
  uDM.qryAluno.Open;
+
+ grdlistar.Columns[0].Width:= 50; //id
+ grdlistar.Columns[1].Width:= 200; //nome
+ grdlistar.Columns[2].Width:= 70; //Data de nascimento
+ grdlistar.Columns[3].Width:= 200; //Endereço
+ grdlistar.Columns[4].Width:= 100; //Id_sala
+ grdListar.Columns[5].Width:= 150; //Data de inclusão
 end;
 
 end.

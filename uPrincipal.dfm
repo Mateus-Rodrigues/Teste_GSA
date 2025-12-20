@@ -2,8 +2,8 @@ object frmListarAluno: TfrmListarAluno
   Left = 0
   Top = 0
   Caption = 'Listar Aluno'
-  ClientHeight = 514
-  ClientWidth = 624
+  ClientHeight = 509
+  ClientWidth = 784
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,9 +14,10 @@ object frmListarAluno: TfrmListarAluno
   TextHeight = 15
   object grdListar: TDBGrid
     Left = 0
-    Top = 233
-    Width = 616
+    Top = 236
+    Width = 784
     Height = 273
+    Align = alBottom
     DataSource = uDM.dsAluno
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
@@ -26,8 +27,8 @@ object frmListarAluno: TfrmListarAluno
     TitleFont.Style = []
   end
   object btnEditar: TButton
-    Left = 520
-    Top = 79
+    Left = 701
+    Top = 78
     Width = 75
     Height = 25
     Caption = 'Editar'
@@ -35,8 +36,8 @@ object frmListarAluno: TfrmListarAluno
     OnClick = btnEditarClick
   end
   object btnAdicionar: TButton
-    Left = 520
-    Top = 48
+    Left = 701
+    Top = 47
     Width = 75
     Height = 25
     Caption = 'Adicionar'
@@ -44,8 +45,8 @@ object frmListarAluno: TfrmListarAluno
     OnClick = btnAdicionarClick
   end
   object btnExcluir: TButton
-    Left = 520
-    Top = 110
+    Left = 701
+    Top = 109
     Width = 75
     Height = 25
     Caption = 'Excluir'
@@ -53,16 +54,16 @@ object frmListarAluno: TfrmListarAluno
     OnClick = btnExcluirClick
   end
   object edtPesquisar: TEdit
-    Left = 0
-    Top = 191
-    Width = 433
+    Left = 8
+    Top = 190
+    Width = 497
     Height = 23
     TabOrder = 4
     TextHint = 'Pesquisar'
   end
   object btnPesquisar: TButton
-    Left = 520
-    Top = 190
+    Left = 701
+    Top = 189
     Width = 75
     Height = 25
     Caption = 'Buscar'
