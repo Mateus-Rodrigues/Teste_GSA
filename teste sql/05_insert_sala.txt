@@ -1,0 +1,2 @@
+INSERT INTO sala (nome_sala, capacidade)
+VALUES ('Sala Teste', 30);

@@ -1,0 +1,4 @@
+SELECT a.*
+FROM aluno a
+INNER JOIN sala s ON s.id_sala = a.id_sala
+WHERE s.nome_sala = 'A';

@@ -1,0 +1,3 @@
+SELECT *
+FROM aluno
+WHERE data_nascimento < '2013-01-01';
